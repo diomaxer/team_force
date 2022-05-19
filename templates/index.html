@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% for user in users %}
+    Имя: {{ user.name }} {{ user.surname }}<br>
+    Скилы: {% for skill in user.skills.all %}
+        {{ skill }}
+    {% endfor %}<br>
+    Языки: {% for language in user.languages.all %}
+        {{ language }}
+    {% endfor %}<br>
+    {% if user.hobie %}
+        Увлечения - {{ user.hobie }}<br>
+    {% endif %}
+    <a href="#">+ Добавить навык</a><br><br>
+{% endfor %}
+</body>
+</html>
