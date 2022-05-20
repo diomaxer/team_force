@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for user in users %}
+        {% if not user.is_admin  %}
+            Имя: {{ user.full_name }}<br>
+            Скилы: {{ user.all_skills }}<br>
+            Языки: {{ user.all_languages }}<br>
+            {% if user.hobie %}
+                Увлечения - {{ user.hobie }}<br>
+            {% endif %}
+            <hr>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

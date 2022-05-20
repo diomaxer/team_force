@@ -1,9 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Регистрация</h1>
+<h1>Авторизация</h1>
 <form method="POST" class="post-form">{% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="save btn btn-default">Save</button>
 </form>
+{% if error %}
+    <br><hr>
+    {{ error }}
+{% endif %}
 {% endblock %}

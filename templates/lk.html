@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Личный кабинет</h1>
+    Имя: {{ user.full_name }}<br>
+    Скилы: {{ user.all_skills }}<br>
+    Языки: {{ user.all_languages }}<br>
+    {% if user.hobie %}
+        Увлечения - {{ user.hobie }}<br>
+    {% endif %}
+    <a href="{% url 'add_skill' %}">+ Добавить навык</a><br><br>
+{% endblock %}

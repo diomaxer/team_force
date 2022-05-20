@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Добавить навык</h1>
+    Ваши навыки: {{ user.all_skills }}
+
+    <form method="POST" class="post-form">{% csrf_token %}
+    {{ user_skills.as_p }}
+        <hr>
+    {{ new_skills.as_p }}<br>
+    <button type="submit" class="save btn btn-default">Save</button>
+</form>
+{% endblock %}
