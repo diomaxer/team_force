@@ -14,7 +14,7 @@ class RegisterForm(forms.ModelForm):
         user.email = self.cleaned_data['email']
         user.set_password(self.cleaned_data['password'])
         if commit:
-            user.get_skills_query()
+            user.save()
         return user
 
 

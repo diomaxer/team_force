@@ -69,7 +69,7 @@ class User(AbstractBaseUser):
         return self.email
 
     def full_name(self):
-        return f'{self.name} {self.surname}{" " + self.patronymic if self.patronymic else ""}'
+        return f'{self.name} {f" {self.patronymic} " if self.patronymic else ""}{self.surname}'
 
     def all_skills(self):
         skills = [skill.name for skill in self.skills.all()]
