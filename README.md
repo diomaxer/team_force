@@ -16,7 +16,7 @@
       почта: admin@g.com
       пароль: admin
       
-Данные для входа в юзера 
+Данные юзеров
 
       почты: user1@mail.ru user2@mail.ru user3@mail.ru
       пароль: password
